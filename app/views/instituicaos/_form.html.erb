@@ -1,0 +1,29 @@
+<body>
+<%= form_with(model: instituicao) do |form| %>
+  <% if instituicao.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(instituicao.errors.count, "error") %> prohibited this instituicao from being saved:</h2>
+
+      <ul>
+        <% instituicao.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+            <div class="entrada">
+              <div class="input-group mx-auto">
+                <div class="input">
+                <%= form.label "Adicione outra instituição:"%>
+                <br>
+                <%= form.text_field :name, class: "form-control" %>
+              </div>
+            </div>  
+                </div>
+
+            <br>
+
+            <div class="fim">
+            <%= form.submit "Adicionar", class: 'btn btn-primary btn-lg' %>
+<% end %>
+</body>

@@ -1,0 +1,13 @@
+<body>
+<p style="color: green"><%= notice %></p>
+<div class="add">
+ <%= link_to "Adicionar Instituição", new_instituicao_path, :class => "btn btn-success btn-lg"%>
+</div>
+<h1>Caso a sua instituição não esteja presente na lista do computador anterior, adicione-a com o botão à &#8656;esquerda! &#8656;</h1>
+
+<div class= "inicio" id="instituicaos">
+  <% @instituicaos.each do |instituicao| %>
+    <%= render instituicao %>
+  <% end %>
+</div>
+</body>
